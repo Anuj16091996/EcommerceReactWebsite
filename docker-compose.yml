@@ -4,7 +4,7 @@ services:
     build: ./frontend
     image: frontend
     ports:
-      - 3000:80
+      - 3000:3000
     environment:
       # IP address of the server.
       # It must match exactly the IP of the server, indeed.
@@ -70,5 +70,5 @@ services:
       - ./flyway/sql:/flyway/sql
     depends_on:
       - db2
-    restart: "on-failure"
+    restart: "no"
 
