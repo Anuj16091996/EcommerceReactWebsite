@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `messagein`
 --
-
+DROP TABLE IF EXISTS `messagein`;
 CREATE TABLE `messagein` (
   `Id` int(11) NOT NULL,
   `SendTime` datetime DEFAULT NULL,
@@ -60,7 +60,7 @@ INSERT INTO `messagein` (`Id`, `SendTime`, `ReceiveTime`, `MessageFrom`, `Messag
 --
 -- Table structure for table `messagelog`
 --
-
+DROP TABLE IF EXISTS `messagelog`;
 CREATE TABLE `messagelog` (
   `Id` int(11) NOT NULL,
   `SendTime` datetime DEFAULT NULL,
@@ -120,7 +120,7 @@ INSERT INTO `messagelog` (`Id`, `SendTime`, `ReceiveTime`, `StatusCode`, `Status
 --
 -- Table structure for table `messageout`
 --
-
+DROP TABLE IF EXISTS `messageout`;
 CREATE TABLE `messageout` (
   `Id` int(11) NOT NULL,
   `MessageTo` varchar(80) DEFAULT NULL,
@@ -142,7 +142,7 @@ CREATE TABLE `messageout` (
 --
 -- Table structure for table `tblautonumber`
 --
-
+DROP TABLE IF EXISTS `tblautonumber`;
 CREATE TABLE `tblautonumber` (
   `ID` int(11) NOT NULL,
   `AUTOSTART` varchar(11) NOT NULL,
@@ -165,7 +165,7 @@ INSERT INTO `tblautonumber` (`ID`, `AUTOSTART`, `AUTOINC`, `AUTOEND`, `AUTOKEY`,
 --
 -- Table structure for table `tblcategory`
 --
-
+DROP TABLE IF EXISTS `tblcategory`;
 CREATE TABLE `tblcategory` (
   `CATEGID` int(11) NOT NULL,
   `CATEGORIES` varchar(255) NOT NULL,
@@ -193,7 +193,7 @@ INSERT INTO `tblcategory` (`CATEGID`, `CATEGORIES`, `USERID`) VALUES
 --
 -- Table structure for table `tblcustomer`
 --
-
+DROP TABLE IF EXISTS `tblcustomer`;
 CREATE TABLE `tblcustomer` (
   `CUSTOMERID` int(11) NOT NULL,
   `FNAME` varchar(30) NOT NULL,
@@ -237,7 +237,7 @@ INSERT INTO `tblcustomer` (`CUSTOMERID`, `FNAME`, `LNAME`, `MNAME`, `CUSHOMENUM`
 --
 -- Table structure for table `tblorder`
 --
-
+DROP TABLE IF EXISTS `tblorder`;
 CREATE TABLE `tblorder` (
   `ORDERID` int(11) NOT NULL,
   `PROID` int(11) NOT NULL,
@@ -261,7 +261,7 @@ INSERT INTO `tblorder` (`ORDERID`, `PROID`, `ORDEREDQTY`, `ORDEREDPRICE`, `ORDER
 --
 -- Table structure for table `tblproduct`
 --
-
+DROP TABLE IF EXISTS `tblproduct`;
 CREATE TABLE `tblproduct` (
   `PROID` int(11) NOT NULL,
   `PRODESC` varchar(255) DEFAULT NULL,
@@ -293,7 +293,7 @@ INSERT INTO `tblproduct` (`PROID`, `PRODESC`, `INGREDIENTS`, `PROQTY`, `ORIGINAL
 --
 -- Table structure for table `tblpromopro`
 --
-
+DROP TABLE IF EXISTS `tblpromopro`;
 CREATE TABLE `tblpromopro` (
   `PROMOID` int(11) NOT NULL,
   `PROID` int(11) NOT NULL,
@@ -320,7 +320,7 @@ INSERT INTO `tblpromopro` (`PROMOID`, `PROID`, `PRODISCOUNT`, `PRODISPRICE`, `PR
 --
 -- Table structure for table `tblsetting`
 --
-
+DROP TABLE IF EXISTS `tblsetting`;
 CREATE TABLE `tblsetting` (
   `SETTINGID` int(11) NOT NULL,
   `PLACE` text NOT NULL,
@@ -341,7 +341,7 @@ INSERT INTO `tblsetting` (`SETTINGID`, `PLACE`, `BRGY`, `DELPRICE`) VALUES
 --
 -- Table structure for table `tblstockin`
 --
-
+DROP TABLE IF EXISTS `tblstockin`;
 CREATE TABLE `tblstockin` (
   `STOCKINID` int(11) NOT NULL,
   `STOCKDATE` datetime DEFAULT NULL,
@@ -356,7 +356,7 @@ CREATE TABLE `tblstockin` (
 --
 -- Table structure for table `tblsummary`
 --
-
+DROP TABLE IF EXISTS `tblsummary`;
 CREATE TABLE `tblsummary` (
   `SUMMARYID` int(11) NOT NULL,
   `ORDEREDDATE` datetime NOT NULL,
@@ -385,7 +385,7 @@ INSERT INTO `tblsummary` (`SUMMARYID`, `ORDEREDDATE`, `CUSTOMERID`, `ORDEREDNUM`
 --
 -- Table structure for table `tbluseraccount`
 --
-
+DROP TABLE IF EXISTS `tbluseraccount`;
 CREATE TABLE `tbluseraccount` (
   `USERID` int(11) NOT NULL,
   `U_NAME` varchar(122) NOT NULL,
@@ -409,7 +409,7 @@ INSERT INTO `tbluseraccount` (`USERID`, `U_NAME`, `U_USERNAME`, `U_PASS`, `U_ROL
 --
 -- Table structure for table `tblwishlist`
 --
-
+DROP TABLE IF EXISTS `tblwishlist`;
 CREATE TABLE `tblwishlist` (
   `id` int(11) NOT NULL,
   `CUSID` int(11) NOT NULL,

@@ -57,7 +57,7 @@ services:
     environment:
       PMA_USER: root
       PMA_PASSWORD: secret
-      PMA_HOST: db1
+      PMA_HOST: db2
       PMA_PORT: 3306
     restart: always
     
@@ -65,10 +65,10 @@ services:
     image: flyway/flyway:7
     # We concatenate the command below to the ENTRYPOINT of the flyway Docker container:
     # The ENTRYPOINT is simply `flyway`
-    command: ["-url=jdbc:mysql://db1:3306/db_ecommerce?verifyServerCertificate=false&useSSL=false", "-user=root", "-password=secret", "-connectRetries=100", "migrate"]
+    command: ["-url=jdbc:mysql://db2:3306/db_ecommerce?verifyServerCertificate=false&useSSL=false", "-user=root", "-password=secret", "-connectRetries=100", "migrate"]
     volumes:
       - ./flyway/sql:/flyway/sql
     depends_on:
       - db2
-    restart: "no"
+    restart: "on-failure"
 
