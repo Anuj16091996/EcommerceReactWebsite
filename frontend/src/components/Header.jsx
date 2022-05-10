@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
+import "../../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import "./header.css";
 
 function Header(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand mt-2 mb-2 ps-4 pe-4" to="/">
             Logo
           </Link>
           <button
@@ -20,18 +22,19 @@ function Header(props) {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarScroll">
-            <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-              <li className="nav-item">
+            <ul className="navbar-nav ms-auto me-auto my-2 my-lg-0 navbar-nav-scroll ">
+              <li className="nav-item hoverCustom">
                 <Link className="nav-link active" aria-current="page" to="/">
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/welcome">
+              <li className="nav-item hoverCustom">
+                <Link className="nav-link " to="/welcome">
                   Link
                 </Link>
               </li>
-              <li className="nav-item dropdown">
+
+              <li className="nav-item dropdown hoverCustom">
                 <Link
                   className="nav-link dropdown-toggle"
                   to="#"
@@ -40,7 +43,7 @@ function Header(props) {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Link
+                  More
                 </Link>
                 <ul
                   className="dropdown-menu"
@@ -67,7 +70,7 @@ function Header(props) {
                 </ul>
               </li>
             </ul>
-            <form className="d-flex">
+            <form className="d-flex ps-4 pe-4">
               <input
                 className="form-control me-2"
                 type="search"

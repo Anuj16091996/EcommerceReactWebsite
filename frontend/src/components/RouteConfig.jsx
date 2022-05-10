@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Header from "./Header";
+import Footer from "./Footer";
 
 function RouteConfig(props) {
   return (
@@ -10,6 +11,7 @@ function RouteConfig(props) {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
