@@ -5,7 +5,7 @@ import "./header.css";
 function Header(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand mt-2 mb-2 ps-4 pe-4" to="/">
             Logo

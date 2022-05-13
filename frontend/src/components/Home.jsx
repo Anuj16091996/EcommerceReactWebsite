@@ -1,16 +1,9 @@
-import Button from "react-bootstrap/Button";
+import Slider from "./Slider";
 
 function Home(props) {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col">
-          <Button variant="primary">Button</Button>
-        </div>
-        <div className="col">
-          <Button variant="primary">Button</Button>
-        </div>
-      </div>
+    <div>
+      <Slider />
     </div>
   );
 }
