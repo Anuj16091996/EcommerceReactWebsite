@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import "./header.css";
+import "./CSS/header.css";
 
 function Header(props) {
   return (

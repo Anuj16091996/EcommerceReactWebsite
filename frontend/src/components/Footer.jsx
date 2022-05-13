@@ -1,8 +1,8 @@
 import React from "react";
-import "./footer.css";
+import "./CSS/footer.css";
 function Footer(props) {
   return (
-    <div className="bottom bg-light navbar-light">
+    <div className=" bg-light navbar-light bottom">
       <footer className="page-footer font-small black pt-4">
         <div className="container-fluid text-center text-md-left">
           <div className="row">

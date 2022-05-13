@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 function RouteConfig(props) {
   return (
-    <div>
+    <div className="">
       <Router>
         <Header />
         <Routes>
