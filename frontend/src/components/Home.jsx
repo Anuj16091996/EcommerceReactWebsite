@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "./Slider";
 import PreviousHistory from "./PreviousHistory";
+import Recommendation from "./Recommendation";
 import "./CSS/home.css";
 
 function Home(props) {
@@ -8,6 +9,7 @@ function Home(props) {
     <div className={props.screenSize.width > 1800 ? "container" : ""}>
       <Slider />
       <PreviousHistory screenSize={props.screenSize} />
+      <Recommendation />
     </div>
   );
 }
