@@ -1,3 +1,4 @@
-.card-design{
-    width: 18rem
+.on-top-element{
+    z-index: 30;
+    bottom: 1.875rem
 }
