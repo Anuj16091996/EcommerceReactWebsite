@@ -1,10 +1,19 @@
 .slick-prev:before {
  
-    color: rgb(17, 1, 1) !important
+    color: rgb(17, 1, 1) !important;
+  }
+
+  .slick-prev{
+    margin-left: 20px !important ;
+
+  }
+  .slick-next{
+    margin-right: 30px;
+
   }
   
   .slick-next:before {
    
-    color: rgb(17, 1, 1) !important
-  
+    color: rgb(17, 1, 1) !important;
   }
+

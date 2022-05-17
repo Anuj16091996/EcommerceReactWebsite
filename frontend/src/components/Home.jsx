@@ -11,7 +11,7 @@ function Home(props) {
       <Slider />
       <PreviousHistory screenSize={props.screenSize} />
       <Recommendation />
-      <TodayDeal />
+      <TodayDeal screenSize={props.screenSize} />
     </div>
   );
 }
